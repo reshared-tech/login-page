@@ -14,6 +14,7 @@ A test page with login function
 > 4. Supported registration methods: mobile phone number + verification code, email + password registration (an email verification address will be automatically sent during registration to verify the validity of the email), and third-party registration
 >
 > ......
+
 [] 3. Confirm the technology stack to be used
 [] 3. Choose the appropriate versions of php and mysql
 [] 4. Data table structure design and index optimization
