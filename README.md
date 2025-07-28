@@ -2,7 +2,7 @@
 A test page with login function
 
 ## Work steps
-[x] 1. Initialize the project engineering git repository
+[X] 1. Initialize the project engineering git repository
 > A new github repository has been created, and the readme file has been initialized. The process has been completed
 [] 2. Design the functions supported by this page
 > 1. Login interface display
@@ -15,7 +15,7 @@ A test page with login function
 >
 > ......
 
-[] 3. Confirm the technology stack to be used
+[] 2. Confirm the technology stack to be used
 [] 3. Choose the appropriate versions of php and mysql
 [] 4. Data table structure design and index optimization
 [] 5. Optimize data sharding based on the number of users
