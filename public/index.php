@@ -1,16 +1,29 @@
 <?php
 
-define('ROOT', (dirname(__DIR__)));
-
 session_start();
 
-require ROOT . '/functions.php';
+define('ROOT', (dirname(__DIR__)));
+require ROOT . '/Core/functions.php';
+spl_autoload_register(function ($class) {
+    $path = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+
+    require base_path($path . '.php');
+});
 
 try {
-    require base_path('database.php');
-    require base_path('router.php');
-} catch(Error | Throwable $e) {
-    echo $e->getMessage();
-    exit;
-    require ROOT . '/views/500.view.php';
+    $router = new \Core\Router;
+
+    require base_path('routes.php');
+
+    $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+
+    $uri = str_replace('/index.php', '', $uri);
+
+    $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+    
+    $router->route($uri, $method);
+} catch(Exception | Throwable $e) {
+    dd($e->getMessage());
+
+    view('500.view.php');
 }

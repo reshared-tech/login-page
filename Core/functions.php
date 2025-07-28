@@ -1,5 +1,7 @@
 <?php
 
+use Core\App;
+
 function dd($value) 
 {
     echo '<pre>';
@@ -10,7 +12,7 @@ function dd($value)
 
 function base_path($path) 
 {
-    return ROOT . '/' . ltrim($path, '/');
+    return ROOT . DIRECTORY_SEPARATOR . ltrim($path, '/');
 }
 
 function view($path, $attributes = []) 
@@ -24,7 +26,7 @@ function abort($statusCode = 404)
 {
     http_response_code($statusCode);
 
-    view("views/$statusCode.view.php");
+    view("$statusCode.view.php");
 
     exit;
 }
@@ -117,7 +119,13 @@ function oldData($key = '')
         return;
     }
     
-    return $_SESSION['old_data'][$key] ?? '';
+    if (isset($_SESSION['old_data'][$key])) {
+        $val = $_SESSION['old_data'][$key];
+        unset($_SESSION['old_data'][$key]);
+        return $val;
+    }
+
+    return '';
 }
 
 function cleanErrors() 
@@ -161,4 +169,13 @@ function setAuthorized($user)
 function destoryAuthor() 
 {
     unset($_SESSION['authorized']);
+}
+
+function app($key, $val = null)
+{
+    if (is_null($val)) {
+        return App::resolve($key);
+    }
+
+    App::bind($key, $val);
 }
