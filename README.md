@@ -4,7 +4,8 @@ A test page with login function
 ## Work steps
 ### 1. Initialize the project engineering git repository
 > A new github repository has been created, and the readme file has been initialized. The process has been completed
-[ ] 2. Design the functions supported by this page
+
+### 2. Design the functions supported by this page
 > 1. Login interface display
 >
 > 2. Pseudo-user home page (used to display the effects of successful and unsuccessful logins)
