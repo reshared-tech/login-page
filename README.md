@@ -37,9 +37,10 @@ A test page with login function
 - sql injection protection
 
 ## Development steps
-- 1. Build a basic MVC framework
-- 2. Data table design
-- 3. Front-end page construction
-- 4. Debug the login and registration functions
-- 5. Optimize the front-end style and add responsive support
-- 6. Unit testing
+- [x] Build a basic MVC framework
+- [x] Data table design
+- [x] Front-end page construction
+- [x] Debug the login and registration functions
+- [ ] Optimize the front-end style and add responsive support
+- [ ] Optimize the code structure
+- [ ] Unit testing
