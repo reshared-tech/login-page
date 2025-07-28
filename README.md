@@ -7,9 +7,9 @@ A test page with login function
 
 ### 2. Design the functions supported by this page
 - 1. Login interface display
-- 2. Pseudo-user home page (used to display the effects of successful and unsuccessful logins)
+- 2. Pseudo-user home page (`used to display the effects of successful and unsuccessful logins`)
 - 3. Go to the registration button
-- 4. Supported registration methods: mobile phone number + verification code, email + password registration (an email verification address will be automatically sent during registration to verify the validity of the email), and third-party registration
+- 4. Supported registration methods: `mobile phone number` + `verification code`, `email + password` registration (an `email verification address` will be automatically sent during registration to verify the validity of the email), and `third-party registration`
 - ......
 
 ### 2. Confirm the technology stack to be used
