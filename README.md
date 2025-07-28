@@ -33,4 +33,13 @@ A test page with login function
     - Automated release
 
 ## Confirmed demand points
-- ...
+- Log in and register with email/username + password
+- sql injection protection
+
+## Development steps
+- 1. Build a basic MVC framework
+- 2. Data table design
+- 3. Front-end page construction
+- 4. Debug the login and registration functions
+- 5. Optimize the front-end style and add responsive support
+- 6. Unit testing
